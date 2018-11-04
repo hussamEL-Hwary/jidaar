@@ -1,0 +1,40 @@
+{% extends 'admin/base.html' %}
+
+{% block content %}
+
+
+<div class="clearfix"></div>
+		<!-- /inner_content-->
+				<div class="inner_content">
+
+					<div class="inner_content_w3_agile_info two_in">
+					  <h2 class="w3_inner_tittle">CAREER</h2>
+
+							<!--/forms-->
+                        <div class="forms-main_agileits">
+
+                            <div class="graph-form agile_info_shadow">
+                    <h1> <a href="{{ url_for('career.new_career') }}"><i class="fa fa-download" aria-hidden="true"></i>  ADD YOUR NEW CAREER ! </a></h1>
+                        <br>
+                         <hr>
+
+                    <div class="form-body">
+                        <div class="form-group">
+                             <label >Current Careers</label>
+                            {% for career in careers %}
+                            <div class="form-group">
+
+                                <h1> <a href="#"><i class="fa fa-star" aria-hidden="true"></i> {{ career.name }} </a></h1>
+                                <br>
+                                <a href="{{ url_for('career.edit_career', id=career.id) }}" class="btn btn-primary">Edit</a>
+                                <a href="{{ url_for('career.delete_career', id=career.id) }}" class="btn btn-danger">Remove</a>
+                            </div>
+                            {% endfor %}
+
+                        </div>
+                                </div>
+                            </div>
+						</div>
+					</div>
+				</div>
+{% endblock %}

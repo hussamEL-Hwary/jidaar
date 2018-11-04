@@ -1,0 +1,222 @@
+{% extends 'public/base.html' %}
+
+{% block content %}
+
+	<div id="colorlib-page">
+
+
+		<div id="colorlib-main">
+			<aside id="colorlib-hero" class="js-fullheight">
+				<div class="flexslider js-fullheight">
+					<ul class="slides">
+                        {% for project in projects %}
+
+				   	<li style="background-image: url({{ project.project_images[0].img_url }});">
+				   		<div class="overlay"></div>
+				   		<div class="container-fluid">
+				   			<div class="row">
+					   			<div class="col-md-6 col-md-offset-3 col-md-push-3 col-sm-12 col-xs-12 js-fullheight slider-text">
+					   				<div class="slider-text-inner">
+					   					<div class="desc">
+						   					<h1>{{ project.name }}</h1>
+												<p><a href="{{url_for('project.single_project', id=project.id) }}" class="btn btn-primary btn-learn">View Project <i class="icon-arrow-right3"></i></a></p>
+											</div>
+					   				</div>
+					   			</div>
+					   		</div>
+				   		</div>
+				   	</li>
+
+                        {% endfor %}
+
+				  	</ul>
+			  	</div>
+			</aside>
+
+			<div class="colorlib-about">
+				<div class="colorlib-narrow-content">
+					<div class="row">
+						<div class="col-md-6">
+							<div class="about-img animate-box" data-animate-effect="fadeInLeft" style="background-image: url({{ url_for('static', filename='images/omara.jpg') }});">
+                    </div>
+
+					<h3 class="colorlib-heading">Certifications</h3>
+						 <section class="">
+						  <div class="services-img"><img style="height: 60%; width: 77%; margin-left: 52px;" src="{{ info.certification_url }}"></div>
+						 </section>
+
+						</div>
+						<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
+							<div class="about-desc">
+								<span class="heading-meta">Welcome</span>
+								<h2 class="colorlib-heading">Who we are</h2>
+								<p class="myPara">{{ info.values }}</p>
+
+								<h6 class="colorlib-heading">Our vision</h6>
+								<p class="myPara">{{ info.vision }}</p>
+
+								<h4 class="colorlib-heading">Our mission</h4>
+								<p class="myPara"> {{ info.mission }} </p>
+							</div>
+							<div class="row padding">
+								<div class="col-md-4 no-gutters animate-box" data-animate-effect="fadeInLeft">
+									<a href="#" class="steps">
+										<p class="icon"><span><i class="icon-check active"></i></span></p>
+										<h3>SAFETY</h3>
+									</a>
+								</div>
+								<div class="col-md-4 no-gutters animate-box" data-animate-effect="fadeInLeft">
+									<a href="#" class="steps">
+										<p class="icon"><span><i class="icon-check"></i></span></p>
+										<h3>INTEGRITY</h3>
+									</a>
+								</div>
+								<div class="col-md-4 no-gutters animate-box" data-animate-effect="fadeInLeft">
+									<a href="#" class="steps">
+										<p class="icon"><span><i class="icon-check"></i></span></p>
+										<h3>EFFICIENCY</h3>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="colorlib-services">
+				<div class="colorlib-narrow-content">
+					<div class="row">
+						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
+							<span class="heading-meta">What we do?</span>
+							<h2 class="colorlib-heading">Here are some of our services</h2>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="row">
+								<div class="col-md-12">
+									<div class="colorlib-feature animate-box" data-animate-effect="fadeInLeft">
+										<div class="colorlib-icon">
+											<i class="flaticon-crane"></i>
+										</div>
+										<div class="colorlib-text">
+											<h3>Buildings’ Contracting</h3>
+											<p class="myPara">
+                                            We are responsible for providing all of the material, labor,
+                                            equipment and services necessary for the construction of
+                                            the project, with high-end quality materials that are scarce in
+                                            the market, turning the client’s plans into reality.
+                                            </p>
+										</div>
+									</div>
+
+									<div class="colorlib-feature animate-box" data-animate-effect="fadeInLeft">
+										<div class="colorlib-icon">
+											<i class="flaticon-sketch"></i>
+										</div>
+										<div class="colorlib-text">
+											<h3>Civil and Structural</h3>
+											<p class="myPara">
+                                            With precise evaluation, excellent design construction and
+                                            careful preservation of elements, we provide our clients with
+                                            the following main sectors: Office Buildings, Industrial Buildings,
+                                            Residential Buildings/Villas, and Community Buildings.
+                                            </p>
+										</div>
+									</div>
+
+									<div class="colorlib-feature animate-box" data-animate-effect="fadeInLeft">
+										<div class="colorlib-icon">
+											<i class="flaticon-engineering"></i>
+										</div>
+										<div class="colorlib-text">
+											<h3>Fit-out Services </h3>
+											<p class="myPara">
+                                            Starting from your building’s shell and core, Jidaar provides you
+                                            with all the fit-out services that compromise turnkey developments,
+                                            delivering an end-result that makes perfect use of your spaces,
+                                            and is matched with the way you operate.                                        </p>
+										</div>
+									</div>
+
+									<div class="colorlib-feature animate-box" data-animate-effect="fadeInLeft">
+										<div class="colorlib-icon">
+                                            <i class="flaticon-worker"></i>
+
+										</div>
+										<div class="colorlib-text">
+											<h3>MEP</h3>
+											<p class="myPara">
+                                            In mechanical, electrical and plumbing engineering,
+                                            Jidaar brings to its clients installation costs that are
+                                            minimized by optimizing material requirements, while
+                                            achieving quality standards and code compliance.
+                                            </p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="row">
+								<div class="col-md-12">
+									<a href="#" class="services-wrap animate-box  text-center" data-animate-effect="fadeInRight">
+										<div class="services-img">
+                                            <img class="ser-img" src="{{ url_for('static', filename='images/services/building.jpg') }}">
+                                        </div>
+										<div class="desc">
+											<h3>BUILDINGS' Contracting</h3>
+										</div>
+									</a>
+									<a href="#" class="services-wrap animate-box  text-center" data-animate-effect="fadeInRight">
+										<div class="services-img">
+                                            <img class="ser-img" src="{{ url_for('static', filename='images/services/civil.jpg')}}">
+                                        </div>
+										<div class="desc">
+											<h3>Civil and Structural</h3>
+										</div>
+									</a>
+
+                                    <a href="#" class="services-wrap animate-box  text-center" data-animate-effect="fadeInRight">
+										<div class="services-img">
+                                            <img class="ser-img" src="{{ url_for('static', filename='images/services/fitout.jpg') }}">
+                                        </div>
+										<div class="desc">
+											<h3>Fit-Out Services</h3>
+										</div>
+									</a>
+
+									<a href="#" class="services-wrap animate-box  text-center" data-animate-effect="fadeInRight">
+										<div class="services-img">
+                                            <img class="ser-img" src="{{ url_for('static', filename='images/services/mep.jpg') }}">
+                                        </div>
+										<div class="desc">
+											<h3>MEP</h3>
+										</div>
+									</a>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+
+			<div class="colorlib-work">
+				<div class="colorlib-narrow-content">
+					<h3 class="colorlib-heading">Our Clients</h3>
+					<div class="container">
+						<section class="customer-logos slider">
+						   {% for client in clients %}
+                           <div class="slide"><img src="{{ client.url }}"></div>
+                           {% endfor %}
+
+						</section>
+					 </div>
+				</div>
+			</div>
+        </div>
+    </div>
+{% endblock %}

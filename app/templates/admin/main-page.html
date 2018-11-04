@@ -1,0 +1,71 @@
+{% extends 'admin/base.html' %}
+
+{% block content %}
+    		<div class="clearfix"></div>
+
+				<div class="inner_content">
+					<div class="inner_content_w3_agile_info">
+					   <div class="agile_top_w3_grids">
+					          <ul class="ca-menu">
+									<li>
+										<a href="{{ url_for('home.edit_basic_info') }}">
+
+											<i class="fa fa-building-o" aria-hidden="true"></i>
+											<div class="ca-content">
+												<h4 class="ca-main">16,808</h4>
+												<h3 class="ca-sub">Edit Home</h3>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="{{ url_for('client.new_client') }}">
+										  <i class="fa fa-user" aria-hidden="true"></i>
+											<div class="ca-content">
+												<h4 class="ca-main one">26,808</h4>
+												<h3 class="ca-sub one">New Clients</h3>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="{{ url_for('project.edit') }}">
+											<i class="fa fa-database" aria-hidden="true"></i>
+											<div class="ca-content">
+											<h4 class="ca-main two">29,008</h4>
+												<h3 class="ca-sub two">Edit Projects</h3>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="{{ url_for('career.edit_careers') }}">
+											<i class="fa fa-tasks" aria-hidden="true"></i>
+											<div class="ca-content">
+												<h4 class="ca-main three">49,436</h4>
+												<h3 class="ca-sub three">Career</h3>
+											</div>
+										</a>
+									</li>
+										<li>
+										<a href="{{ url_for('home.edit_contact') }}">
+											<i class="fa fa-clone" aria-hidden="true"></i>
+											<div class="ca-content">
+												<h4 class="ca-main four">30,808</h4>
+												<h3 class="ca-sub four">Contact </h3>
+											</div>
+										</a>
+									</li>
+								  	<li>
+										<a href="{{ url_for('home.edit_about') }}">
+
+											<i class="fa fa-building-o" aria-hidden="true"></i>
+											<div class="ca-content">
+												<h4 class="ca-main">16,808</h4>
+												<h3 class="ca-sub">Edit About</h3>
+											</div>
+										</a>
+									</li>
+									<div class="clearfix"></div>
+								</ul>
+					   </div>
+					</div>
+				</div>
+{% endblock %}

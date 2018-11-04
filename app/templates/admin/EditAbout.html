@@ -1,0 +1,89 @@
+{% extends 'admin/base.html' %}
+
+{% block content %}
+<div class="clearfix"></div>
+		<!-- /inner_content-->
+				<div class="inner_content">
+
+					<div class="inner_content_w3_agile_info two_in">
+					  <h2 class="w3_inner_tittle">Edit About</h2>
+
+									<div class="agile-grids">
+				<!-- validation -->
+				<div class="grids">
+
+					<div class="forms-grids">
+						<div class="w3agile-validation">
+						<div class="agile-validation agile_info_shadow">
+								<div class="my-div">
+									<form method="post" action="#" class="valida" autocomplete="off" novalidate="novalidate" enctype="multipart/form-data">
+
+										<h3 class="w3_inner_tittle two">HISTORY:</h3>
+
+                                        <label for="field-1">Field 1: (required)&nbsp;<span class="at-required-highlight">*</span></label>
+										<div class="form-group">
+											<textarea name="history" cols="7" rows="10" id="field-1" class="form-control" required>{{ about.history }}</textarea>
+										</div>
+                                        <hr>
+                                        <div class="form-group">
+                                            <h3 class="w3_inner_tittle two">NEW LETTER:</h3>
+
+                                            <label for="exampleInputFile">File input</label>
+                                            <input type="file" name="letter" id="exampleInputFile">
+
+                                        </div>
+										<hr>
+
+
+
+                                        <div class="form-group">
+                                       <h3 class="w3_inner_tittle two">Certification images:</h3>
+                                        <div class="form-group">
+
+                                         <h3 class="w3_inner_tittle two">ISO:</h3>
+
+										<label for="field-2">Field 2: (required)&nbsp;<span class="at-required-highlight">*</span></label>
+										<div class="form-group">
+											<textarea name="iso" cols="7" rows="6" id="field-2" class="form-control" required>{{ about.iso_description }}</textarea>
+										</div>
+
+                                            <label for="exampleInputFile">File input</label>
+                                            <input type="file" name="iso_img" id="exampleInputFile">
+
+                                        </div>
+                                            <hr>
+                                            <div class="form-group">
+
+                                            <h3 class="w3_inner_tittle two">OHSAS:</h3>
+
+										<label for="field-3">Field 3: (required)&nbsp;<span class="at-required-highlight">*</span></label>
+										<div class="form-group">
+											<textarea name="ohsas" cols="7" rows="6" id="field-3" class="form-control" required>{{ about.ohsas_description }}</textarea>
+										</div>
+
+                                            <label for="exampleInputFile">File input</label>
+                                            <input type="file" name="ohsas_img" id="exampleInputFile">
+                                        </div>
+                                         <hr>
+                                            <h3 class="w3_inner_tittle two">CODE OF CONDUCT</h3>
+                                           <label for="exampleInputFile">File input</label>
+                                            <input type="file" name="code_of_conduct" id="exampleInputFile">
+                                          <hr>
+                                          <h3 class="w3_inner_tittle two">BROCHURE</h3>
+                                           <label for="exampleInputFile">File input</label>
+                                            <input type="file" name="brochure" id="exampleInputFile">
+                                            <hr>
+                                     <button type="submit" class="btn btn-default">Submit</button>
+                                     <a href="{{ url_for('admin.admin_home') }}" class="btn btn-dark">Cancel</a>
+                                        </div>
+
+                                    </form>
+                                </div>
+							</div>
+						</div>
+					</div>
+				</div>
+                </div>
+				</div>
+				</div>
+{% endblock %}

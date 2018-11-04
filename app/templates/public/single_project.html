@@ -1,0 +1,53 @@
+{% extends 'public/base.html' %}
+
+{% block content %}
+
+		<div id="colorlib-main">
+
+			<div class="colorlib-contact about">
+				<div class="colorlib-narrow-content">
+                    <div class="row">
+
+     <h1 class="heading-meta text-center">{{ project.name }}</h1>
+                        <div class="col-md-6 col-md-offset-3">
+
+                            <div class="project-info">
+                            <table>
+
+                                <tr>
+                                <td class="project-text info-spa">Role</td>
+                                <td class="info-spa">{{ project.role }}</td>
+                                <td class="project-text info-spa">Area</td>
+                                <td class="info-spa"> {{ project.area }} </td>
+                                </tr>
+                                <tr>
+                                <td class="project-text info-spa">Location</td>
+                                <td class="info-spa">{{ project.location }}</td>
+                                <td class="project-text info-spa">Status</td>
+                                <td class="info-spa"> {{ project.status }} </td>
+                                </tr>
+                            </table>
+                        </div>
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                        <div class="projects-slider">
+
+                       {% for img in project.project_images %}
+                       <div>
+                        <img src="{{ img.img_url }}" />
+                       </div>
+                            {% endfor %}
+                   </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+{% endblock %}

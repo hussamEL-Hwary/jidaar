@@ -1,0 +1,163 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Jidaar</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<meta name="author" content="" />
+    <!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+
+	<link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
+
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/animate.css') }}">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/icomoon.css') }}">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+	<!-- Flexslider  -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/flexslider.css') }}">
+	<!-- Flaticons  -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='fonts/flaticon/font/flaticon.css') }}">
+	<!-- Owl Carousel -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/owl.carousel.min.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/owl.theme.default.min.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='slick/slick.css') }}"/>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='slick/slick-theme.css') }}"/>
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+	<!------ Include the above in your HEAD tag ---------->
+
+ 	<!-- Social Footer, Colour Matching Icons -->
+ 	<!-- Include Font Awesome Stylesheet in Header -->
+ 	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+	<!-- Modernizr JS -->
+	<script src="static/js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+
+	</head>
+    <body>
+
+    <!-- Top menu -->
+    <nav class="navbar navbar-inverse navbar-fixed-top navbar-no-bg jidaar-nav" role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#top-navbar-1">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="{{ url_for('home.home') }}"><img src="{{ url_for('static', filename='images/jlogo.png') }}" class="navbar-brand" alt="jidaar"></a>
+			</div>
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="top-navbar-1">
+				<ul class="nav navbar-nav navbar-right">
+					<li class="nav-item"><a id="ba" href="{{ url_for('home.home') }}">Home</a></li>
+                    <li class="nav-item"><a id="ba" href="{{ url_for('home.about') }}">About Us</a></li>
+                    <li class="nav-item"><a id="ba" href="{{ url_for('home.services') }}">Services</a></li>
+					<li class="nav-item"><a id="ba" href="{{ url_for('project.all_projects') }}">Projects</a></li>
+					<li class="nav-item"><a id="ba" href="{{ url_for('career.career') }}">Careers</a></li>
+                    <li class="nav-item"><a id="ba" href="{{ url_for('home.contact') }}">Contact Us</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+    {% block content %}
+    {% endblock %}
+
+    <div class="container">
+        <hr class="footer-hr">
+        <div class="col-lg-4">
+            <div class="text-left center-block">
+                <p class="heading-meta footer-small">Contact us</p>
+                <br />
+                <div class="col-md-6">
+                <i class="fa fa-envelope"> {{ contact_info.email }} </i>
+                <i class="fa fa-fax">    {{ contact_info.fax }}</i><br>
+                </div>
+                <div class="col-md-6">
+                <i class="fa fa-phone">  {{ contact_info.phone }}     </i>
+                <i class="fa fa-mobile">  {{ contact_info.mobile }}</i><br>
+                </div>
+                <i class="fa fa-map-marker">  {{ contact_info.address }}</i>
+            </div>
+        </div>
+
+        <div class="col-lg-4">
+            <div class="text-center center-block">
+                <div id="map" style="min-height: 110px"></div>
+                <br/>
+
+            </div>
+        </div>
+
+        <div class="col-lg-4">
+            <div class="text-center center-block">
+                <p class="heading-meta footer-small">follow us</p>
+                <br />
+                    <a href="https:www.linkedin.com/company/jidaar-construction" target="_blank" style="margin-left:-3%;"><i id="social-fb" class="fa fa-linkedin-square fa-3x social"></i></a>
+
+            </div>
+        </div>
+
+
+
+        <hr>
+    </div>
+    <div class="container">
+        <div class="col-lg-12">
+            <p class="text-center">© Copyright ©2018 All rights </p>
+        </div>
+    </div>
+
+
+
+    <!-- jQuery -->
+	<script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+	<!-- jQuery Easing -->
+	<script src="{{ url_for('static', filename='js/jquery.easing.1.3.js') }}"></script>
+	<!-- Bootstrap -->
+	<script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+	<!-- Waypoints -->
+	<script src="{{ url_for('static', filename='js/jquery.waypoints.min.js') }}"></script>
+	<!-- Flexslider -->
+	<script src="{{ url_for('static', filename='js/jquery.flexslider-min.js') }}"></script>
+	<!-- Sticky Kit -->
+	<script src="{{ url_for('static', filename='js/sticky-kit.min.js') }}"></script>
+	<!-- Owl carousel -->
+	<script src="{{ url_for('static', filename='js/owl.carousel.min.js') }}"></script>
+	<!-- Counters -->
+	<script src="{{ url_for('static', filename='js/jquery.countTo.js') }}"></script>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='slick/slick.min.js') }}"></script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAFoZAkCACk6sAhpBQ1fP0SszrTqMkuI0M&v=3&callback=initMap">
+    </script>
+    <script src="{{ url_for('static', filename='js/google_map.js') }}"></script>
+	<!-- MAIN JS -->
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+    </body>
+</html>

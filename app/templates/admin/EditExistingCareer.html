@@ -1,0 +1,52 @@
+ {% extends 'admin/base.html' %}
+
+{% block content %}
+
+
+
+<div class="clearfix"></div>
+<div class="wthree_agile_admin_info">
+    <!-- /inner_content-->
+    <div class="inner_content">
+
+        <div class="inner_content_w3_agile_info two_in">
+            <h2 class="w3_inner_tittle">EDIT {{ career.name }} CAREER</h2>
+
+            <!--/forms-->
+            <div class="forms-main_agileits">
+
+                <div class="graph-form agile_info_shadow">
+
+                    <div class="form-body">
+                        <form action="{{ url_for('career.edit_career', id=career.id) }}" method="post" enctype="multipart/form-data">
+                            <div class="form-group">
+                                <h3 class="w3_inner_tittle two"> EDIT YOUR CAREER NAME ! </h3>
+                                <label for="field-1">Field 1: (required)&nbsp;<span
+                                        class="at-required-highlight">*</span></label>
+                                <div class="form-group">
+                                  <input type="text" name="name" class="form-control" value="{{ career.name }}" required>
+                                </div>
+
+                                <hr>
+
+                                <h3 class="w3_inner_tittle two"> EDIT YOUR CAREER DESCRIPTION ! </h3>
+                                <label for="field-2">Field 2: (required)&nbsp;<span
+                                        class="at-required-highlight">*</span></label>
+                                <div class="form-group">
+                                    <textarea name="description" class="form-control" id="" cols="30" rows="10" required>{{ career.description }}</textarea>
+                                </div>
+
+                                <hr>
+                                <button type="submit" class="btn btn-default">Submit</button>
+                                <a class="btn btn-dark" href="{{ url_for('admin.admin_home') }}">Cancel</a>
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+  {% endblock %}

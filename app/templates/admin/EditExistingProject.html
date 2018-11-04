@@ -1,0 +1,67 @@
+{% extends 'admin/base.html' %}
+
+{% block content %}
+
+	<div class="clearfix"></div>
+		<!-- /inner_content-->
+				<div class="inner_content">
+
+					<div class="inner_content_w3_agile_info two_in">
+					  <h2 class="w3_inner_tittle text-capitalize">EDIT {{ project.name }} PROJECT</h2>
+
+							<!--/forms-->
+                        <div class="forms-main_agileits">
+
+                            <div class="graph-form agile_info_shadow">
+
+                                <div class="form-body">
+                                    <form action="{{ url_for('project.edit_project', id=project.id) }}" method="post" enctype="multipart/form-data">
+                                        <div class="form-group">
+                                         <h3 class="w3_inner_tittle two"> EDIT YOUR PROJECT NAME ! </h3>
+                                        <label for="field-1">Field 1: (required)&nbsp;<span class="at-required-highlight">*</span></label>
+										<div class="form-group">
+											<input type="text" name="project_name" class="form-control" value="{{ project.name }}" required>
+										</div>
+
+                                            <hr>
+
+                                        <div class="form-group">
+                                            <label for="focusedinput" class="col-sm-2 control-label">Role</label>
+                                                <input type="text" name="role" class="form-control" id="focusedinput" value="{{ project.role }}" required>
+
+                                            <hr>
+                                        </div>
+                                           <div class="form-group">
+                                            <label for="focusedinput" class="col-sm-2 control-label">Location</label>
+                                                <input type="text" name="location" class="form-control" id="focusedinput" value="{{ project.location }}" required>
+                                               <hr>
+                                           </div>
+                                           <div class="form-group">
+                                            <label for="focusedinput" class="col-sm-2 control-label">Area</label>
+                                               <input type="text" name="area" class="form-control" id="focusedinput" value="{{ project.area }}" required>
+                                             <hr>
+                                           </div>
+                                           <div class="form-group">
+                                            <label for="focusedinput" class="col-sm-2 control-label">Status</label>
+                                               <input type="text" name="status" class="form-control1" id="focusedinput" value="{{ project.status }}" required>
+                                               <hr>
+                                           </div>
+
+                                        <h3 class="w3_inner_tittle two"> APPEND AN IMAGE TO THE PROJECT ! </h3>
+                                           <div class="form-group">
+                                                           <label for="exampleInputFile">File input</label>
+                                                            <input type="file" name="files[]" id="exampleInputFile" multiple="">
+                                                     </div>
+                                                </div>
+                                        <hr>
+                                         <p class="help-block">Submit your project please</p>
+                                        <button type="submit" class="btn btn-default">Submit</button>
+                                        <a href="{{ url_for('admin.admin_home') }}" class="btn btn-dark">Cancel</a>
+                                    </form>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+{% endblock %}

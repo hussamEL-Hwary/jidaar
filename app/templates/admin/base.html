@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Jidaars' Admin</title>
+<!-- custom-theme -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Esteem Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+		function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- //custom-theme -->
+<link href="{{ url_for('static', filename='css/bootstrap.css') }}" rel="stylesheet" type="text/css" media="all" />
+<link href="{{ url_for('static', filename='css/component.css') }}" rel="stylesheet" type="text/css" media="all" />
+<link href="{{ url_for('static', filename='css/export.css') }}" rel="stylesheet" type="text/css" media="all" />
+<link href="{{ url_for('static', filename='css/flipclock.css') }}" rel="stylesheet" type="text/css" media="all" />
+<link href="{{ url_for('static', filename='css/circles.css') }}" rel="stylesheet" type="text/css" media="all" />
+<link href="{{ url_for('static', filename='css/style_grid.css') }}" rel="stylesheet" type="text/css" media="all" />
+<link href="{{ url_for('static', filename='css/admin-style.css') }}" rel="stylesheet" type="text/css" media="all" />
+<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+<!-- font-awesome-icons -->
+
+<!-- //font-awesome-icons -->
+<link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800" rel="stylesheet">
+</head>
+<body>
+<!-- banner -->
+<div class="wthree_agile_admin_info">
+		  <!-- /w3_agileits_top_nav-->
+		  <!-- /nav-->
+		  <div class="w3_agileits_top_nav">
+			<ul id="gn-menu" class="gn-menu-main">
+
+				<li class="second logo"><h1><a href="{{ url_for('admin.admin_home') }}"><i class="fa fa-graduation-cap" aria-hidden="true"></i>JIDAAR </a></h1></li>
+
+                <li>
+                <a class="btn btn-dark" style="height: 38px; margin-top: 10px;" href="{{ url_for('auth.logout') }}"><i class="fa fa-sign-out"></i> Logout</a>
+                </li>
+			<li>
+                <a class="btn btn-dark" style="height: 38px; margin-top: 10px;" href="#"><i class=""></i> Account setting</a>
+                </li>
+            </ul>
+			<!-- //nav -->
+
+		</div>
+
+
+
+</div>
+
+{% block content %}
+{% endblock %}
+
+
+
+</body>
+</html>

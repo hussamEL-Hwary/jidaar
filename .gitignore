@@ -1,0 +1,6 @@
+/venv/*
+*.pyc
+.idea/*
+*.db
+*.swo
+*.swp

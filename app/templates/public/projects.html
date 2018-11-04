@@ -1,0 +1,65 @@
+{% extends 'public/base.html' %}
+
+{% block content %}
+
+	<div id="colorlib-page" class="about">
+        <div id="colorlib-main">
+                <h1 class="heading-meta text-center ">Our projects</h1>
+
+				    <section class="col-xs-12 col-sm-4 col-md-4 col-lg-4 grid">
+                        {% for project in col1 %}
+				          <div class="portfolio-item animate-box" data-animate-effect="fadeInUp">
+				            <div class="hover-bg">
+				              <a href="{{ url_for('project.single_project', id=project.id) }}">
+                                <div class="hover-text">
+                                   <h4>{{ project.name }}</h4>
+				              </div>
+                              </a>
+				              <img src="{{ project.project_images[0].img_url }}" class="img-responsive" alt="Project Title">
+                            </div>
+				          </div>
+                        {% endfor %}
+
+
+				    </section>
+
+				    <section class="col-xs-12 col-sm-4 col-md-4 col-lg-4 grid">
+				        {% for project in col2 %}
+                        <div class="portfolio-item animate-box" data-animate-effect="fadeInUp">
+				            <div class="hover-bg">
+				              <a href="{{ url_for('project.single_project', id=project.id) }}">
+                                <div class="hover-text">
+				                <h4>{{ project.name }}</h4>
+				              </div>
+                              </a>
+				              <a><img src="{{ project.project_images[0].img_url }}" class="img-responsive" alt="Project Title"> </a>
+                            </div>
+				          </div>
+
+                        {% endfor %}
+
+				    </section>
+
+				    <section class="col-xs-12 col-sm-4 col-md-4 col-lg-4 grid">
+
+                        {% for project in col3 %}
+                        <div class="portfolio-item animate-box" data-animate-effect="fadeInUp">
+				            <div class="hover-bg">
+				              <a href="{{ url_for('project.single_project', id=project.id) }}">
+                                <div class="hover-text">
+				                <h4>{{ project.name }}</h4>
+				              </div>
+                              </a>
+				              <img src="{{ project.project_images[0].img_url }}" class="img-responsive" alt="Project Title">
+                            </div>
+				          </div>
+
+                        {% endfor %}
+
+				    </section>
+
+
+    </div>
+    </div>
+
+{% endblock %}

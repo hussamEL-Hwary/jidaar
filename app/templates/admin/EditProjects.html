@@ -1,0 +1,41 @@
+{% extends 'admin/base.html' %}
+
+{% block content %}
+
+<div class="clearfix"></div>
+		<!-- /inner_content-->
+				<div class="inner_content">
+
+					<div class="inner_content_w3_agile_info two_in">
+					  <h2 class="w3_inner_tittle">PROJECTS </h2>
+
+							<!--/forms-->
+                        <div class="forms-main_agileits">
+
+                            <div class="graph-form agile_info_shadow">
+                    <h1> <a href="{{ url_for('project.new_project') }}"><i class="fa fa-gavel" aria-hidden="true"></i>  ADD YOUR NEW PROJECT ! </a></h1>
+                        <br>
+                         <hr>
+
+                    <div class="form-body">
+
+                             <label >Current Projects</label>
+                        {% for project in projects %}
+                            <div class="form-group">
+
+                                <h1> <a href="AddCareer.html"><i class="fa fa-star" aria-hidden="true"></i> {{ project.name }} </a></h1>
+                                <br>
+                                <a href="{{ url_for('project.edit_project', id=project.id) }}" class="btn btn-primary">Edit</a>
+                                <a href="{{ url_for('project.delete_project', id=project.id) }}" class="btn btn-danger">Remove</a>
+                            </div>
+                        {% endfor %}
+
+                    </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+{% endblock %}
