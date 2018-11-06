@@ -113,5 +113,5 @@ class About(base):
     brochure_url = Column(String, nullable=False)
 
 
-engine = create_engine('sqlite:///database.db')
+engine = create_engine('postgresql://jidaar:jidaar202@localhost/jidaar')
 base.metadata.create_all(engine)
