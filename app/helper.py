@@ -23,8 +23,7 @@ app.secret_key = 'secret_key'
 
 # connect to db
 def init_db():
-    engine = create_engine('sqlite:///app/database.db',
-                           connect_args={'check_same_thread': False})
+    engine = create_engine('postgresql://jidaar:jidaar202@localhost/jidaar')
     base.metadata.bind = engine
     DBsession = sessionmaker(bind=engine)
     return DBsession()

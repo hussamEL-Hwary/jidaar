@@ -8,7 +8,7 @@ project_view = Blueprint('project', __name__, url_prefix='/project')
 
 
 photos = UploadSet('photos', IMAGES)
-app.config['UPLOADED_PHOTOS_DEST'] = os.getcwd() +'/app/static/images'
+app.config['UPLOADED_PHOTOS_DEST'] = os.getcwd() +'var/www/jidaar/jidaar/app/static/images'
 configure_uploads(app, photos)
 
 
