@@ -10,7 +10,7 @@ from model import (Basic,
                    Contact_info,
                    About)
 
-'''
+
 # init database with company basic info
 basic_info = Basic(mission="Jidaar is steadily and surely earning its "
                            "rank among the best in the construction industry"
@@ -113,7 +113,7 @@ session.add(abb)
 session.commit()
 session.close()
 
-'''
+
 ad = Admin(user_name='boodi@jidaar.com')
 ad.hash_password('RRRR123')
 session.add(ad)
