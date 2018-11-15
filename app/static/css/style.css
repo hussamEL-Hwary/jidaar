@@ -1466,14 +1466,26 @@ body.offcanvas {
     padding-top: 30px; } }
 
 
-
 .footer-hr {
-  border-color: #6f6666;
-  margin-bottom: 0;
+    border-color: #6f6666;
+    margin-bottom: 0;
+    padding-top: 2%;
 }
 
 .footer-small {
   margin-bottom: -24px;
+}
+
+.myFooter{
+    background-color: #ffc300;
+    width: 100%;
+}
+
+.paraFooter{
+    font-weight: 800;
+    padding-top: 1%;
+    letter-spacing: 1px;
+    margin-bottom: 1%;
 }
 
 .ser-img {
@@ -2139,3 +2151,4 @@ button.slick-prev, button.slick-prev:hover {
 .hover-bg:hover .hover-text {
   opacity: 1 !important;
 }
+
