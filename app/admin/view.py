@@ -33,3 +33,17 @@ def update_email():
     except Exception:
         abort(500)
 
+
+@admin_view.route('/edit/pass', methods=['POST'])
+@login_required
+def edit_password():
+    password = request.form['new_pass']
+    confirm_password = request.form['re_new_pass']
+    if password != confirm_password:
+        flash("password must match")
+        return redirect(url_for('admin.update_info'))
+    current_admin = session.query(Admin).first()
+    current_admin.hash_password(password)
+    session.commit()
+    flash("password successfully updated")
+    return redirect(url_for('admin.admin_home'))
