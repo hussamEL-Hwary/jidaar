@@ -6,17 +6,17 @@
 <div class="clearfix"></div>
 		<!-- /inner_content-->
 				<div class="inner_content">
-{% with messages = get_flashed_messages() %}
-  {% if messages %}
-    <ul class=flashes>
-    {% for message in messages %}
-      <li>{{ message }}</li>
-    {% endfor %}
-    </ul>
-  {% endif %}
-{% endwith %}
 					<div class="inner_content_w3_agile_info two_in">
-					  <h2 class="w3_inner_tittle">Edit Admin Account</h2>
+                    {% with messages = get_flashed_messages() %}
+                      {% if messages %}
+                        <ul class=flashes>
+                        {% for message in messages %}
+                          <li>{{ message }}</li>
+                        {% endfor %}
+                        </ul>
+                      {% endif %}
+                    {% endwith %}
+                        <h2 class="w3_inner_tittle">Edit Admin Account</h2>
 
 
                         <div class="wthree_general graph-form agile_info_shadow ">
