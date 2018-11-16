@@ -5,6 +5,15 @@
 
 				<div class="inner_content">
 					<div class="inner_content_w3_agile_info">
+                     {% with messages = get_flashed_messages() %}
+                        {% if messages %}
+                        <ul class=flashes>
+                        {% for message in messages %}
+                          <li>{{ message }}</li>
+                        {% endfor %}
+                        </ul>
+                      {% endif %}
+                    {% endwith %}
 					   <div class="agile_top_w3_grids">
 					          <ul class="ca-menu">
 									<li>

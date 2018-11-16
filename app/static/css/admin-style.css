@@ -3345,3 +3345,11 @@ li.second.logo.admin {
 	}
 }
 /*--//Responsive--*/
+
+
+.flashes {
+    font-size: medium;
+    font-weight: 600;
+    color: red;
+    margin-left: 31%;
+}

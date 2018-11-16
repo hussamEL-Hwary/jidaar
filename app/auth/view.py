@@ -19,5 +19,4 @@ def login():
 @auth_view.route('/logout')
 def logout():
     del login_session['username']
-    flash('You have successfully been logged out.')
     return redirect(url_for('home.home'))
