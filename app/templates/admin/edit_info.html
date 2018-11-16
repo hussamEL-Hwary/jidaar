@@ -1,0 +1,64 @@
+{% extends 'admin/base.html' %}
+
+{% block content %}
+
+
+<div class="clearfix"></div>
+		<!-- /inner_content-->
+				<div class="inner_content">
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul class=flashes>
+    {% for message in messages %}
+      <li>{{ message }}</li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+					<div class="inner_content_w3_agile_info two_in">
+					  <h2 class="w3_inner_tittle">Edit Admin Account</h2>
+
+
+                        <div class="wthree_general graph-form agile_info_shadow ">
+
+                            <div class="grid-1 ">
+                                <div class="form-body">
+                                    <form action="{{ url_for('admin.update_email') }}" method="post" class="form-horizontal" enctype="multipart/form-data">
+                                        <div class="form-group">
+                                            <label for="focusedinput" class="col-sm-2 control-label">Email</label>
+                                            <div class="col-sm-8">
+                                                <input type="email" name="email" class="form-control1" id="focusedinput" value="{{ admin_email }}" required>
+                                            </div>
+
+                                        </div>
+                                        <div class="form-group">
+                                        <button type="submit" class="btn btn-default" style="margin-left: 18%;">update email</button>
+                                        </div>
+                                         </form>
+                                </div>
+                                    <div class="form-body">
+                                    <form action="{{ url_for('home.edit_contact') }}" method="post" class="form-horizontal" enctype="multipart/form-data">
+                                           <div class="form-group">
+                                            <label for="focusedinput" class="col-sm-2 control-label">New Password</label>
+                                            <div class="col-sm-8">
+                                                <input type="password" name="new_pass" class="form-control1" id="focusedinput" required>
+                                            </div>
+                                        </div>
+                                           <div class="form-group">
+                                            <label for="focusedinput" class="col-sm-2 control-label">Repeat New Passwod</label>
+                                            <div class="col-sm-8">
+                                                <input type="password" name="re_new_pass" class="form-control1" id="focusedinput" required>
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <div class="form-group">
+                                          <button type="submit" class="btn btn-default" style="margin-left: 18%;">change password</button>
+                                        </div>
+                                    </form>
+                        </div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+{% endblock %}
