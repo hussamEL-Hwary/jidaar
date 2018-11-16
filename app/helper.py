@@ -59,5 +59,5 @@ def page_not_found(e):
 
 # handel 500 error
 @app.errorhandler(500)
-def permission_denied(e):
-    return render_template('500.html'), 401
+def internal_error(e):
+    return render_template('500.html'), 500
