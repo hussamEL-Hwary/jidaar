@@ -3,7 +3,7 @@ from app.model import Client
 from flask_uploads import UploadSet, configure_uploads, IMAGES
 client_view = Blueprint('client',  __name__, url_prefix='/clients')
 photos = UploadSet('photos', IMAGES)
-app.config['UPLOADED_PHOTOS_DEST'] = os.getcwd() +'app/static/images'
+app.config['UPLOADED_PHOTOS_DEST'] = os.getcwd() +'var/www/jidaar/jidaar/app/static/images'
 configure_uploads(app, photos)
 
 
