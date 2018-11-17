@@ -1203,7 +1203,8 @@ body.offcanvas {
   .btn.btn-md {
     padding: 8px 20px !important; }
   .btn.btn-lg {
-    padding: 18px 36px !important; }
+    padding: 12px !important;
+    border-radius: 23px;}
   .btn:hover, .btn:active, .btn:focus {
     -webkit-box-shadow: none !important;
     box-shadow: none !important;
@@ -1891,11 +1892,12 @@ button.slick-prev, button.slick-prev:hover {
 }
 
 .download-btn {
-  background: #000000;
-  color: #ef7a2f;
-  border: 2px solid #000000;
-  width: 41%;
-  margin: auto;
+    background: #000000;
+    color: #ef7a2f;
+    border: 2px solid #df7733;
+    width: 28%;
+    margin: auto;
+    border-top: 1px solid #df7733;
 }
 
 .cloud-icon {
@@ -1903,36 +1905,18 @@ button.slick-prev, button.slick-prev:hover {
 }
 
 .down-img {
-    height: 129px;
-    width: 41%;
+    height: 90px;
+    width: 37%;
     margin: auto;
+    border: 2px solid #df7733;
+    border-radius: 24px;
+    border-bottom: 1px solid #df7733;
 }
-
 
 .contact-map {
   height: 250px;
 }
-/*
-.project-info {
-    width: 100%;
-    border-radius: 25px;
-    background: #051120;
-    padding: 20px;
-    height: 150px;
-    margin-bottom: 10%;
-    color: #fff;
-}
 
-.project-text {
-  font-size: larger;
-  font-weight: 600;
-}
-
-.info-spa {
-  padding-right: 40px;
-  padding-top: 16px;
-}
-*/
 .project-img {
   height: 450px;
 }
