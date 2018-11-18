@@ -1566,7 +1566,7 @@ button.slick-prev, button.slick-prev:hover {
   font-weight: bold;
 }
 .letters-slider img {
-  height: 700px;
+  height: 65%;
 }
 
 /* Slick Slider Styles -- Provided by https://kenwheeler.github.io/slick/ */
