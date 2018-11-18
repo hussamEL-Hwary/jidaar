@@ -20,7 +20,7 @@ def home():
     bascic_info = session.query(Basic).first()
     clients = session.query(Client).all()
     con = session.query(Contact_info).first()
-    main_projects = session.query(Project).limit(4)
+    main_projects = session.query(Project).order_by(Project.id).limit(4)
     session.close()
     return render_template('public/home.html',
                            info=bascic_info,
