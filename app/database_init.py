@@ -10,7 +10,7 @@ from model import (Basic,
                    Contact_info,
                    About)
 
-
+'''
 # init database with company basic info
 basic_info = Basic(mission="Jidaar is steadily and surely earning its "
                            "rank among the best in the construction industry"
@@ -119,3 +119,13 @@ ad.hash_password('RRRR123')
 session.add(ad)
 session.commit()
 
+'''
+
+# delete all clients
+clients = session.query(Client).all()
+for client in clients:
+    session.delete(client)
+    session.commit()
+
+session.close()
+print "done"
