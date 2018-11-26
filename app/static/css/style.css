@@ -2142,8 +2142,8 @@ button.slick-prev, button.slick-prev:hover {
 .project-text {
     font-size: larger;
     font-weight: 600;
-    padding-right: 5%;
-    padding-left: 9%;
+    padding-right: 13%;
+    padding-left: 8%;
 }
 
 .project-info {
@@ -2159,7 +2159,6 @@ button.slick-prev, button.slick-prev:hover {
 }
 
 .info-spa {
-    padding-right: 10%;
-    color: #26251f;
+     color: #26251f;
     font-weight: 500;
 }
