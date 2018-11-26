@@ -93,7 +93,7 @@ def delete_project(id):
             session.commit()
             session.close()
             flash("Project successfully deleted")
-            rmtree(os.getcwd()+'/app/static/images/projects/'+str(project_to_delete.id))
+            rmtree(os.getcwd()+'var/www/jidaar/jidaar/app/static/images/projects/'+str(project_to_delete.id))
         except Exception:
             abort(500)
         finally:
