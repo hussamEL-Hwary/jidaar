@@ -2162,3 +2162,41 @@ button.slick-prev, button.slick-prev:hover {
      color: #26251f;
     font-weight: 500;
 }
+
+
+
+/******************Responsive**********************/
+@media only screen and (max-width: 415px) {
+  body {
+    font-size: 16px;
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+
+  .down-img {
+    height: 60px;
+    width: 37%;
+    margin: auto;
+    margin-left: 14%;
+  }
+
+  Remove central-block class
+  .download-btn {
+    color: #ef7a2f;
+    border: 1.5px solid #df7733;
+    width: 35%;
+    margin: auto;
+  }
+
+  .btn-primary {
+    background: white;
+    color: #fff;
+    border: 2px solid #FFC300;
+  }
+
+  .myFooter {
+    background-color: #df7733;
+    width: 100%;
+    color: white;
+  }
+}
