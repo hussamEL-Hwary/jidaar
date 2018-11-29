@@ -261,7 +261,7 @@ function toggleBounce() {
 	};
 
 	$('.customer-logos').slick({
-        speed: 900,
+        speed: 1600,
         cssEase: 'linear',
 		slidesToShow: 6,
 		slidesToScroll: 1,
