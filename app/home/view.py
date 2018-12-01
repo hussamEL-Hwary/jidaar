@@ -11,7 +11,7 @@ from flask_uploads import UploadSet, configure_uploads, IMAGES, DOCUMENTS
 from werkzeug.utils import secure_filename
 home_view = Blueprint('home', __name__, url_prefix='/')
 photos = UploadSet('photos', IMAGES+tuple('pdf'))
-app.config['UPLOADED_PHOTOS_DEST'] = os.getcwd() +'app/static/images'
+app.config['UPLOADED_PHOTOS_DEST'] = os.getcwd() +'var/www/jidaar/jidaar/app/static/images'
 configure_uploads(app, photos)
 
 
