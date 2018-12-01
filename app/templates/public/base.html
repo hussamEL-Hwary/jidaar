@@ -26,7 +26,8 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/owl.theme.default.min.css') }}">
     <!-- Flaticons  -->
 	<link rel="stylesheet" href="{{ url_for('static', filename='fonts/flaticon/font/flaticon.css') }}">
-	<!-- Owl Carousel -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Owl Carousel -->
 	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='slick/slick.css') }}"/>
 	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='slick/slick-theme.css') }}"/>
 	<!-- Theme style  -->
@@ -62,12 +63,12 @@
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse" id="top-navbar-1">
 				<ul class="nav navbar-nav navbar-right">
-					<li class="nav-item"><a id="ba" href="{{ url_for('home.home') }}">Home</a></li>
-                    <li class="nav-item"><a id="ba" href="{{ url_for('home.about') }}">About Us</a></li>
-                    <li class="nav-item"><a id="ba" href="{{ url_for('home.services') }}">Services</a></li>
-					<li class="nav-item"><a id="ba" href="{{ url_for('project.all_projects') }}">Projects</a></li>
-					<li class="nav-item"><a id="ba" href="{{ url_for('career.career') }}">Careers</a></li>
-                    <li class="nav-item"><a id="ba" href="{{ url_for('home.contact') }}">Contact Us</a></li>
+					<li class="nav-item {{ 'active-item' if active_page == 'home' else '' }}"><a href="{{ url_for('home.home') }}">Home</a></li>
+                    <li class="nav-item {{ 'active-item' if active_page == 'about' else '' }}"><a href="{{ url_for('home.about') }}">About Us</a></li>
+                    <li class="nav-item {{ 'active-item' if active_page == 'services' else '' }}"><a href="{{ url_for('home.services') }}">Services</a></li>
+					<li class="nav-item {{ 'active-item' if active_page == 'project' else '' }}"><a href="{{ url_for('project.all_projects') }}">Projects</a></li>
+					<li class="nav-item {{ 'active-item' if active_page == 'career' else '' }}"><a href="{{ url_for('career.career') }}">Careers</a></li>
+                    <li class="nav-item {{ 'active-item' if active_page == 'contact' else '' }}"><a href="{{ url_for('home.contact') }}">Contact Us</a></li>
 				</ul>
 			</div>
 		</div>
@@ -122,9 +123,7 @@
             <a style=" color: black;" href="https://www.linkedin.com/in/abdelrahman-nasser-08b10b118/">Abdulrahman</a></p>
         </div>
     </div>
-
-
-
+    <!--JS -->
     <!-- jQuery -->
 	<script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
 	<!-- jQuery Easing -->
