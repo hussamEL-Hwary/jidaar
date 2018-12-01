@@ -12,7 +12,8 @@ def career():
     session.close()
     return render_template('public/career.html',
                            careers=careers,
-                           contact_info=con)
+                           contact_info=con,
+                           active_page='career')
 
 
 @career_view.route('/new', methods=['GET', 'POST'])

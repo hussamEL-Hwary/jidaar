@@ -11,7 +11,7 @@ from flask_uploads import UploadSet, configure_uploads, IMAGES, DOCUMENTS
 from werkzeug.utils import secure_filename
 home_view = Blueprint('home', __name__, url_prefix='/')
 photos = UploadSet('photos', IMAGES+tuple('pdf'))
-app.config['UPLOADED_PHOTOS_DEST'] = os.getcwd() +'var/www/jidaar/jidaar/app/static/images'
+app.config['UPLOADED_PHOTOS_DEST'] = os.getcwd() +'app/static/images'
 configure_uploads(app, photos)
 
 
@@ -26,7 +26,8 @@ def home():
                            info=bascic_info,
                            clients=clients,
                            contact_info=con,
-                           projects=main_projects)
+                           projects=main_projects,
+                           active_page='home')
 
 @home_view.route('/basic/edit', methods=['GET', 'POST'])
 @login_required
@@ -60,7 +61,8 @@ def edit_basic_info():
 def contact():
     con = session.query(Contact_info).first()
     session.close()
-    return render_template('public/contact.html', contact_info=con)
+    return render_template('public/contact.html', contact_info=con,
+                           active_page='contact')
 
 
 @home_view.route('/contact/edit', methods=['GET', 'POST'])
@@ -84,7 +86,8 @@ def edit_contact():
 def services():
     con = session.query(Contact_info).first()
     session.close()
-    return render_template('public/services.html', contact_info=con)
+    return render_template('public/services.html', contact_info=con,
+                           active_page='services')
 
 
 @home_view.route('/about')
@@ -96,7 +99,8 @@ def about():
     return render_template('public/about.html',
                            contact_info=con,
                            letters=letters,
-                           about_data=about_data)
+                           about_data=about_data,
+                           active_page='about')
 
 
 @home_view.route('/about/edit', methods=['GET', 'POST'])

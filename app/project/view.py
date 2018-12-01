@@ -8,7 +8,7 @@ project_view = Blueprint('project', __name__, url_prefix='/project')
 
 
 photos = UploadSet('photos', IMAGES)
-app.config['UPLOADED_PHOTOS_DEST'] = os.getcwd() +'var/www/jidaar/jidaar/app/static/images'
+app.config['UPLOADED_PHOTOS_DEST'] = os.getcwd() +'app/static/images'
 configure_uploads(app, photos)
 
 
@@ -23,7 +23,8 @@ def all_projects():
                            col1=first_p,
                            col2=second_p,
                            col3=third_p,
-                           contact_info = con)
+                           contact_info=con,
+                           active_page='project')
 
 
 @project_view.route('<int:id>/view')
@@ -35,7 +36,8 @@ def single_project(id):
         return redirect(url_for('project.all_projects'))
     return render_template('public/single_project.html',
                            project=project,
-                           contact_info=con)
+                           contact_info=con,
+                           active_page='project')
 
 
 @project_view.route('/edit')
