@@ -1155,9 +1155,10 @@ body.offcanvas {
     outline: none !important; }
 
 .btn-primary {
-  background: #FFC300;
-  color: #fff;
-  border: 2px solid #FFC300; }
+ background: white;
+    color: #fff;
+    border: 2px solid #FFC300;
+}
   .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
     background: #ffc91a !important;
     border-color: #ffc91a !important; }
@@ -1422,8 +1423,9 @@ body.offcanvas {
 }
 
 .myFooter{
-    background-color: #ffc300;
+    background-color: #df7733;
     width: 100%;
+    color: white;
 }
 
 .paraFooter{
@@ -1836,12 +1838,10 @@ button.slick-prev, button.slick-prev:hover {
 }
 
 .download-btn {
-    background: #000000;
     color: #ef7a2f;
-    border: 2px solid #df7733;
+    border: 1.5px solid #df7733;
     width: 35%;
     margin: auto;
-    border-top: 1px solid #df7733;
 }
 
 .cloud-icon {
@@ -1849,12 +1849,10 @@ button.slick-prev, button.slick-prev:hover {
 }
 
 .down-img {
-    height: 90px;
+    height: 60px;
     width: 37%;
     margin: auto;
-    border: 5px solid #df7733;
-    border-radius: 24px;
-    border-bottom: 1px solid #df7733;
+    margin-left: 14%;
 }
 
 .contact-map {
@@ -2111,36 +2109,13 @@ button.slick-prev, button.slick-prev:hover {
 
 /******************Responsive**********************/
 @media only screen and (max-width: 415px) {
-  body {
-    font-size: 16px;
-    margin-left: 3%;
-    margin-right: 3%;
-  }
-
-  .down-img {
-    height: 60px;
-    width: 37%;
-    margin: auto;
-    margin-left: 14%;
-  }
-
-  Remove central-block class
-  .download-btn {
-    color: #ef7a2f;
-    border: 1.5px solid #df7733;
-    width: 35%;
-    margin: auto;
-  }
-
-  .btn-primary {
-    background: white;
-    color: #fff;
-    border: 2px solid #FFC300;
-  }
-
-  .myFooter {
-    background-color: #df7733;
-    width: 100%;
-    color: white;
-  }
+    body {
+        font-size: 16px;
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+}
+/*try*/
+.active-item {
+   border-bottom: 2px solid #FFC300 !important;
 }
