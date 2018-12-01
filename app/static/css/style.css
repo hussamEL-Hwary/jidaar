@@ -2106,6 +2106,10 @@ button.slick-prev, button.slick-prev:hover {
 }
 
 
+.active-item {
+   border-bottom: 2px solid #FFC300 !important;
+}
+
 
 /******************Responsive**********************/
 @media only screen and (max-width: 415px) {
@@ -2114,8 +2118,39 @@ button.slick-prev, button.slick-prev:hover {
         margin-left: 3%;
         margin-right: 3%;
     }
-}
-/*try*/
-.active-item {
-   border-bottom: 2px solid #FFC300 !important;
+
+  .project-text {
+    padding-left: 5%;
+  }
+
+
+  .info-spa {
+    margin-left: 10%;
+  }
+
+
+  .project-info {
+     width: 100%;
+     border-radius: 25px;
+     background: #bfbfbf;
+     height: 110px;
+     color: #fff;
+     height: 100%;
+  }
+
+
+  td {
+     display: block !important;
+  }
+
+
+  .services-wrap .services-img {
+     display: block;
+     z-index: -1;
+  }
+
+   #top-navbar-1 ul {
+     background: white;
+    }
+   
 }
