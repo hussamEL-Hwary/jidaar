@@ -394,7 +394,7 @@ figure {
       width: auto; }
       @media screen and (max-width: 768px) {
         #colorlib-hero .flexslider .flex-control-nav {
-          right: 20px;
+          /*right: 20px;*/
           top: 100px; } }
       #colorlib-hero .flexslider .flex-control-nav li {
         display: block;
@@ -2161,9 +2161,9 @@ button.slick-prev, button.slick-prev:hover {
    #top-navbar-1 ul {
      background: white;
     }
-
+/*
    .footer-small {
     margin-left: 10%;
-    }
+    }*/
 
 }
