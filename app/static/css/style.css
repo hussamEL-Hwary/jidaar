@@ -1752,6 +1752,7 @@ button.slick-prev, button.slick-prev:hover {
 .slick-slider
 {
     margin-bottom: 30px;
+box-shadow: 1px 1px 4px 1px  #2e2b23;
 }
 
 .slick-dots
@@ -2156,6 +2157,10 @@ button.slick-prev, button.slick-prev:hover {
 
    #top-navbar-1 ul {
      background: white;
+    }
+
+   .footer-small {
+    margin-left: 10%;
     }
 
 }
