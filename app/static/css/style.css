@@ -686,7 +686,7 @@ body.offcanvas {
   content: "\ea1c"; }
 
 .panel-heading a.collapsed {
-  background: #ef7a2f;
+  background: #e98b43;
   border: 1px solid #e6e6e6 !important;
   color: #333333; }
 
@@ -2115,6 +2115,17 @@ button.slick-prev, button.slick-prev:hover {
 }
 
 
+.jidaar-nav {
+   background-color: #fff;
+   border-color: #ffffff;
+}
+
+.logo {
+
+   width: 184px;
+}
+
+
 
 /******************Responsive**********************/
 @media only screen and (max-width: 415px) {
@@ -2167,6 +2178,7 @@ button.slick-prev, button.slick-prev:hover {
     margin-left: 10%;
     }*/
 
+
 }
 
 
@@ -2183,13 +2195,14 @@ body {
    padding-top: 22px;
 }
 
-.navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
-  margin-left: -34px;
 }
 
-.jidaar-nav{
-  background-color: #fff;
-  border-color: #ffffff;
-}
+
+@media screen and (max-width: 768px){
+
+  #top-navbar-1 ul {
+   margin: 0 0 2em 0;
+   margin-top: 5%;
+  }
 
 }
