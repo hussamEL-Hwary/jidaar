@@ -2114,6 +2114,9 @@ button.slick-prev, button.slick-prev:hover {
    border-bottom: 2px solid #FFC300 !important;
 }
 
+.ML {
+margin-left: 5%;
+}
 
 /******************Responsive**********************/
 @media only screen and (max-width: 415px) {
@@ -2166,4 +2169,23 @@ button.slick-prev, button.slick-prev:hover {
     margin-left: 10%;
     }*/
 
+}
+
+
+@media screen and (max-width: 992px){
+body {
+   font-size: 16px;
+   margin-left: 3%;
+   margin-right: 3%;
+
+
+}
+.project-info {
+   width: 90%;
+   margin-left: 5%;
+   padding-top: 22px;
+}
+.ML {
+margin-left: 2%;
+}
 }
