@@ -2125,7 +2125,9 @@ button.slick-prev, button.slick-prev:hover {
    width: 184px;
 }
 
-
+.fa{
+  margin-left:3% !important;
+}
 
 /******************Responsive**********************/
 @media only screen and (max-width: 415px) {
@@ -2206,3 +2208,23 @@ body {
   }
 
 }
+
+
+@media screen and (max-width: 767px){
+.navbar-nav {
+          background-color: white;
+  }
+.icon-bar {
+  background-color: black !important;
+}
+
+}
+
+
+@media screen and (min-width: 992px and max-width: 1334px){
+ .pro {
+   width:75%;
+   Float:left;
+ }
+}
+
